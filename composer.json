@@ -1,5 +1,5 @@
 {
-    "name": "kontoulis/rabbitmq-laravel",
+    "name": "amirimatin/rabbitmq-laravel",
     "description": "RabbitMQ Broker for Laravel",
     "license": "MIT",
     "keywords": ["rabbitmq", "laravel"],
