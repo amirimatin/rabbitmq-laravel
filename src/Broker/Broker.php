@@ -234,14 +234,14 @@ class Broker extends AMQPChannel
                 case Handler::RV_SUCCEED_CONTINUE:
                     /* Handler succeeded, you SHOULD continue processing */
                     $handler->handleSucceedContinue($msg);
-                    continue;
+                    break;
 
                 case Handler::RV_PASS:
                     /**
                      * Just continue processing (I have no idea what
                      * happened in the handler)
                      */
-                    continue;
+                    break;
 
                 case Handler::RV_FAILED_STOP:
                     /* Handler failed and MUST stop processing */
@@ -264,7 +264,7 @@ class Broker extends AMQPChannel
                 case Handler::RV_FAILED_CONTINUE:
                     /* Well, handler failed, but you may try another */
                     $handler->handleFailedContinue($msg);
-                    continue;
+                    break;
 
                 default:
                     return false;
